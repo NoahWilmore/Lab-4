@@ -84,14 +84,10 @@ DoubleNode<T>* CircularList<T>::find(int index)
 		abs(dist_prev_abs);
 	
 	if(dist_next > dist_prev)
-		min_dist = dist_prev;
+		min_dist = dist_prev_abs;
 	else
-		min_dist = dist_next;
-
-
-
-
-
+		min_dist = dist_next_abs;
+	
    if (min_dist < 0)  //negative distance means use prev links, counterclockwise
    {
       for (int i = 1; i <= -1*min_dist; i++)
