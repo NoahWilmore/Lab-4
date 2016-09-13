@@ -2,6 +2,7 @@
 #define CIRCULARLIST_H
 
 #include "CircularListIterator.h"
+#include <cmath>
 
 // #include "Drawable.h"
 // #include "Line.h"
@@ -75,7 +76,10 @@ DoubleNode<T>* CircularList<T>::find(int index)
    //DO THIS which distance is smaller?
    //find the minimum distance using absolute value
    //set min_dist to the smaller value, keeping the sign
-
+	if(dist_next > dist_prev)
+	{
+		min_dist = dist_prev;
+	}
 
 
 
